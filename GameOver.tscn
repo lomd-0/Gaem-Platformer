@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://premium_photo-1669863278824-f73c824bc671.jpeg" type="Texture" id=1]
+[ext_resource path="res://Button.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 324.0
+margin_top = 267.0
+margin_right = 400.0
+margin_bottom = 298.0
+rect_scale = Vector2( 5.683, 5.683 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "GAME OVER
+"
+align = 1
+valign = 1
+
+[node name="PremiumPhoto-1669863278824-f73C824Bc671" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 517, 301 )
+scale = Vector2( 0.336382, 0.293457 )
+texture = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 411.0
+margin_top = 381.0
+margin_right = 493.0
+margin_bottom = 401.0
+rect_scale = Vector2( 2.865, 2.865 )
+text = "Try Again??"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
